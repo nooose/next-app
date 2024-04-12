@@ -10,11 +10,9 @@ export default async function MovieDetail(
     params: { id: string };
 }) {
     return <div>
-        <h2>Movide detail page</h2>
         <Suspense fallback={<h1>Loading moive info</h1>}>
             <MovieInfo id={id}/>
         </Suspense>
-        <h2>Movide videos page</h2>
         <Suspense fallback={<h1>Loading moive videos</h1>}>
             <MovieVideos id={id}/>
         </Suspense>
